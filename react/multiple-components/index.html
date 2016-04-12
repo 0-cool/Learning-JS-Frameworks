@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React JS</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script></head>
+<body>
+	<div id="content"></div>
+
+	<script type="text/jsx">
+		var FirstComponent = React.createClass({
+			render: function(){
+				return (
+					<h2> {this.props.user} likes to eat {this.props.food}! </h2>
+					);
+			}
+		});
+		React.render(<div>
+			<FirstComponent user="Carlos" food="Lasagna" />
+			<FirstComponent user="Betty" food="Rice" />
+			<FirstComponent user="Jose" food="Orange" />
+			<FirstComponent user="Cesar" food="Beef" /></div>, document.getElementById("content"));
+	</script>
+</body>
+</html>
