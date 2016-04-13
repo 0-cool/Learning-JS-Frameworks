@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>React JS</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script></head>
+<body>
+	<div id="root"></div>
+
+	<script type="text/jsx">
+	var Button = React.createClass({
+		getInitialState: function(){
+			return{counter: 0};
+		},
+		handleClick: function(){
+			this.setState({ counter: this.state.counter+1 });
+		},
+		render: function(){
+			return(
+			<button onClick={this.handleClick}>{this.state.counter}</button>
+			)
+		}
+	});
+	React.render(<Button />, document.getElementById("root"));
+	</script>
+</body>
+</html>
